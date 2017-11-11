@@ -16,27 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `location`
+-- Table structure for table `managerlogin`
 --
 
-DROP TABLE IF EXISTS `location`;
+DROP TABLE IF EXISTS `managerlogin`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `location` (
-  `ID` varchar(45) NOT NULL,
-  `Name` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
+CREATE TABLE `managerlogin` (
+  `ID` varchar(45) DEFAULT NULL,
+  `HotelID` varchar(45) DEFAULT NULL,
+  `EmailID` varchar(45) NOT NULL,
+  `Password` varchar(45) NOT NULL,
+  KEY `mgrloginemployeefk_idx` (`ID`),
+  KEY `mgrloginhotelfk_idx` (`HotelID`),
+  CONSTRAINT `mgrloginhotelfk` FOREIGN KEY (`HotelID`) REFERENCES `hotel` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `location`
+-- Dumping data for table `managerlogin`
 --
 
-LOCK TABLES `location` WRITE;
-/*!40000 ALTER TABLE `location` DISABLE KEYS */;
-INSERT INTO `location` VALUES ('L01','Bangalore'),('L02','Delhi'),('L03','Chennai'),('L04','Mumbai'),('L05','Kolkata');
-/*!40000 ALTER TABLE `location` ENABLE KEYS */;
+LOCK TABLES `managerlogin` WRITE;
+/*!40000 ALTER TABLE `managerlogin` DISABLE KEYS */;
+INSERT INTO `managerlogin` VALUES ('E01','H01','abed.nadir@gmail.com','abednadir'),('E02','H02','pierce.hawthorne@gmail.com','piercehawthorne'),('E03','H03','craig.pelton@gmail.com','craigpelton'),('E04','H04','troy.barnes.com','troybarnes'),('E05','H05','jeff.winger@gmail.com','jeffwinger'),('E06','H06','annie.edison@gmail.com','annieedison');
+/*!40000 ALTER TABLE `managerlogin` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

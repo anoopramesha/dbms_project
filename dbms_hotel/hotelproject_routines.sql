@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `hotelproject` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `hotelproject`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: hotelproject
@@ -34,4 +32,4 @@ USE `hotelproject`;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-10 13:46:40
+-- Dump completed on 2017-11-11 18:37:40

@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `hotelproject` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `hotelproject`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: hotelproject
@@ -29,6 +27,7 @@ CREATE TABLE `customer` (
   `Name` varchar(45) DEFAULT NULL,
   `Address` varchar(100) DEFAULT NULL,
   `Phone` varchar(45) DEFAULT NULL,
+  `EmailID` varchar(45) NOT NULL,
   `Password` varchar(45) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -40,6 +39,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+INSERT INTO `customer` VALUES ('C01','Alex Hunter','Bangalore','9620007294','alex.hunter@gmail.com','alexhunter'),('C02','Will Byers','Delhi','9844035967','will.byers94@gmail.com','willbyers'),('C03','Franz Ferdinand','Chennai','9902043095','franz.ferdinand@gmail.com','franzferdinand'),('C04','Steven Gerrard','Bangalore','9632435369','steven.gerrard@gmail.com','stevengerrard'),('C05','Harry Kane','Mumbai','8197543462','harry.kane@gmail.com','harrykane'),('C06','root','Bangalore','987654321','rooot@gmail.com','rootroot');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-10 13:46:39
+-- Dump completed on 2017-11-11 18:37:39

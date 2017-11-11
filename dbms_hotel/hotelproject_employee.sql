@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `hotelproject` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `hotelproject`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: hotelproject
@@ -31,8 +29,10 @@ CREATE TABLE `employee` (
   `Address` varchar(45) DEFAULT NULL,
   `Phone` varchar(45) DEFAULT NULL,
   `Gender` varchar(10) NOT NULL,
-  `employeecol` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
+  `HotelID` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `employeehotelfk_idx` (`HotelID`),
+  CONSTRAINT `employeehotelfk` FOREIGN KEY (`HotelID`) REFERENCES `hotel` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -42,6 +42,7 @@ CREATE TABLE `employee` (
 
 LOCK TABLES `employee` WRITE;
 /*!40000 ALTER TABLE `employee` DISABLE KEYS */;
+INSERT INTO `employee` VALUES ('E01','Abed Nadir','50000','Bangalore','9611277443','Male','H01'),('E02','Pierce Hawthorne','40000','Delji','7760416798','Male','H02'),('E03','Craig Pelton','55000','Chennai','9901111551','Male','H03'),('E04','Troy Barnes','45000','Mumbai','9663963928','Male','H04'),('E05','Jeff Winger','40000','Bangalore','9874563210','Male','H05'),('E06','Annie Edison','55000','Kolkata','9886655232','Femal','H06');
 /*!40000 ALTER TABLE `employee` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-10 13:46:40
+-- Dump completed on 2017-11-11 18:37:39

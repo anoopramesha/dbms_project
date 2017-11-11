@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `hotelproject` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `hotelproject`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: hotelproject
@@ -40,6 +38,7 @@ CREATE TABLE `pricing` (
 
 LOCK TABLES `pricing` WRITE;
 /*!40000 ALTER TABLE `pricing` DISABLE KEYS */;
+INSERT INTO `pricing` VALUES ('H01','1000','2500','4500'),('H02','1000','2500','4500'),('H03','1000','2500','4500'),('H04','1000','2500','4500'),('H05','1000','2500','4500'),('H06','1000','2500','4500'),('H06','1000','2500','4500');
 /*!40000 ALTER TABLE `pricing` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-10 13:46:40
+-- Dump completed on 2017-11-11 18:37:40

@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `hotelproject` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `hotelproject`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: hotelproject
@@ -26,7 +24,6 @@ DROP TABLE IF EXISTS `hotel`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `hotel` (
   `ID` varchar(45) NOT NULL,
-  `MgrID` varchar(45) DEFAULT NULL,
   `LocID` varchar(45) DEFAULT NULL,
   `Name` varchar(45) DEFAULT NULL,
   `Stars` varchar(45) DEFAULT NULL,
@@ -34,10 +31,8 @@ CREATE TABLE `hotel` (
   `Deluxe` varchar(45) DEFAULT NULL,
   `Executive` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID`),
-  KEY `hotelmgrfk_idx` (`MgrID`),
   KEY `hotellocfk_idx` (`LocID`),
-  CONSTRAINT `hotellocfk` FOREIGN KEY (`LocID`) REFERENCES `location` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `hotelmgrfk` FOREIGN KEY (`MgrID`) REFERENCES `employee` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `hotellocfk` FOREIGN KEY (`LocID`) REFERENCES `location` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -47,6 +42,7 @@ CREATE TABLE `hotel` (
 
 LOCK TABLES `hotel` WRITE;
 /*!40000 ALTER TABLE `hotel` DISABLE KEYS */;
+INSERT INTO `hotel` VALUES ('H01','L01','Bangalore Hotel','5','20','20','20'),('H02','L02','Delhi Hotel','4','20','20','10'),('H03','L03','Chennai Hotel','4','20','15','5'),('H04','L04','Mumbai Hotel','4','20','20','15'),('H05','L01','Bangalore Hotel 2','4','20','20','15'),('H06','L05','Kolkata Hotel','4','15','15','5');
 /*!40000 ALTER TABLE `hotel` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-10 13:46:40
+-- Dump completed on 2017-11-11 18:37:39
