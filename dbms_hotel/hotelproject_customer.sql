@@ -39,7 +39,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES ('C01','Alex Hunter','Bangalore','9620007294','alex.hunter@gmail.com','alexhunter'),('C02','Will Byers','Delhi','9844035967','will.byers94@gmail.com','willbyers'),('C03','Franz Ferdinand','Chennai','9902043095','franz.ferdinand@gmail.com','franzferdinand'),('C04','Steven Gerrard','Bangalore','9632435369','steven.gerrard@gmail.com','stevengerrard'),('C05','Harry Kane','Mumbai','8197543462','harry.kane@gmail.com','harrykane'),('C06','root','Bangalore','987654321','rooot@gmail.com','rootroot');
+INSERT INTO `customer` VALUES ('C01','Alex Hunter','Bangalore','9620007294','alex.hunter@gmail.com','alexhunter'),('C02','Will Byers','Delhi','9844035967','will.byers94@gmail.com','willbyers'),('C03','Franz Ferdinand','Chennai','9902043095','franz.ferdinand@gmail.com','franzferdinand'),('C04','Steven Gerrard','Bangalore','9632435369','steven.gerrard@gmail.com','stevengerrard'),('C05','Harry Kane','Mumbai','8197543462','harry.kane@gmail.com','harrykane'),('C06','root','Bangalore','987654321','rooot@gmail.com','rootroot'),('C07','Arjun H M','Bangalore','9620007295','arjunhm@gmail.com','arjunhm');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-11 18:37:39
+-- Dump completed on 2017-11-13 22:05:39

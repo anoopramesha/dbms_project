@@ -26,12 +26,10 @@ CREATE TABLE `booking` (
   `ID` varchar(45) NOT NULL,
   `CustID` varchar(45) DEFAULT NULL,
   `HotelID` varchar(45) DEFAULT NULL,
-  `CheckIn` date DEFAULT NULL,
-  `CheckOut` date DEFAULT NULL,
+  `CheckIn` varchar(45) DEFAULT NULL,
+  `CheckOut` varchar(45) DEFAULT NULL,
   `Bill` varchar(45) DEFAULT NULL,
-  `Basic` int(11) unsigned zerofill DEFAULT '00000000000',
-  `Deluxe` int(11) unsigned zerofill DEFAULT '00000000000',
-  `Executive` int(11) unsigned zerofill DEFAULT '00000000000',
+  `Room Type` varchar(45) DEFAULT '00000000000',
   PRIMARY KEY (`ID`),
   KEY `bookingcustlfk_idx` (`CustID`),
   KEY `bookinghotelfk_idx` (`HotelID`),
@@ -46,6 +44,7 @@ CREATE TABLE `booking` (
 
 LOCK TABLES `booking` WRITE;
 /*!40000 ALTER TABLE `booking` DISABLE KEYS */;
+INSERT INTO `booking` VALUES ('B01','C01','H01','12/07/2017','14/07/2017','2500','00000000000');
 /*!40000 ALTER TABLE `booking` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-11 18:37:39
+-- Dump completed on 2017-11-13 22:05:41
